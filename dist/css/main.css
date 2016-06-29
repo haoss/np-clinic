@@ -6413,15 +6413,15 @@ label {
         width: 100%;
         background: linear-gradient(to right, rgba(103, 112, 137, 0.3) 0%, rgba(243, 81, 79, 0.2) 100%); }
       .services__block figure .img::after, .services__block figure .img::before {
-        height: calc(100% + 4px);
+        height: 110%;
         width: 25px;
         position: absolute;
         left: -13px;
-        top: -2px;
+        top: -5px;
         background-color: #fff;
         z-index: 10;
         content: '';
-        transform: skewX(-6deg); }
+        transform: rotateZ(6deg); }
       .services__block figure .img::before {
         left: inherit;
         right: -13px; }
@@ -6598,7 +6598,7 @@ label {
     position: relative;
     overflow: hidden; }
     .about__carousel::after {
-      height: 105%;
+      height: 110%;
       width: 65px;
       position: absolute;
       right: -30px;
@@ -6607,7 +6607,7 @@ label {
       background-color: #fff;
       z-index: 5;
       content: '';
-      transform: skewX(-6deg); }
+      transform: rotate(6deg); }
 
 /* doctors */
 .doctors {
@@ -6650,7 +6650,8 @@ label {
 /* certificate */
 .certificate__carousel {
   width: 200px;
-  margin: 0 auto 65px; }
+  margin: 0 auto 65px;
+  position: relative; }
 
 /* consultation */
 .consultation {
