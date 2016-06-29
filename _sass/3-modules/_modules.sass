@@ -1,0 +1,838 @@
+/* modules */
+.services
+  &__block
+    max-width: 360px
+    margin: 0 auto
+    position: relative
+    figure
+      position: relative
+
+      .img
+        position: relative
+        overflow: hidden
+        margin-bottom: 25px
+        &__background
+          position: absolute
+          z-index: 5
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          height: 100%
+          width: 100%
+          background: -moz-linear-gradient(left, rgba(103,112,137,0.3) 0%, rgba(243,81,79,0.2) 100%)
+          background: -webkit-linear-gradient(left, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
+          background: linear-gradient(to right, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
+        &::after, &::before
+          height: calc(100% + 4px)
+          width: 25px
+          position: absolute
+          left: -13px
+          top: -2px
+          background-color: $color-white
+          z-index: 10
+          content: ''
+          transform: skewX(-6deg)
+        &::before
+          left: inherit
+          right: -13px
+        img
+          position: relative
+          z-index: 1
+
+    a
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      z-index: 20
+
+    figcaption
+      .title
+        font-size: rem(20)
+        color: $link-color
+        text-transform: uppercase
+        font-weight: 400
+        transition: color 0.3s ease
+        margin-bottom: 5px
+
+    &:hover
+      figcaption
+        .title
+          color: $color-red
+
+/* scew */
+.block-skew
+  position: absolute
+  width: 65px
+  height: 65px
+  border: 2px solid #eeeff2
+  transform: skewX(-10deg)
+
+  &--services
+    margin-left: -225px
+    bottom: 60px
+
+  &--advantages
+    width: 250px
+    height: 250px
+    z-index: 5
+    bottom: 0px
+    margin-left: -115px
+    border-width: 4px
+    border-color: #fbfcfc
+    transform: skewX(-8deg)
+    &.right
+      top: 0px
+      bottom: inherit
+      margin-left: 1020px
+
+  &--about
+    width: 125px
+    height: 125px
+    border-width: 3px
+    border-color: #eeeff2
+    margin-left: 1280px
+    &.small
+      width: 60px
+      height: 60px
+      border-width: 2px
+      margin-left: 1450px
+
+  &--doctors
+    margin-left: 1360px
+
+  &--consultation
+    &.small
+      width: 60px
+      height: 60px
+      margin-left: -300px
+    &.medium
+      border-color: #acb1bf
+      border-width: 3px
+      margin-left: -206px
+      height: 125px
+      width: 125px
+    &.big
+      border-color: #5a647f
+      border-width: 5px
+      width: 257px
+      height: 257px
+      margin-left: -53px
+
+  &--main-slide
+    right: 0
+    z-index: 10
+    top: 290px
+    &.small
+      width: 60px
+      height: 60px
+      right: 340px
+    &.medium
+      width: 125px
+      height: 125px
+      right: 164px
+      border-width: 3px
+      border-color: #acb1bf
+    &.big
+      width: 257px
+      height: 257px
+      right: -150px
+      border-width: 5px
+      border-color: #5a647f
+
+/* advantages */
+.advantages
+  padding: 30px 0
+  overflow: hidden
+
+  &__body
+    padding: 50px 15px
+    background-color: #fbfcfc
+    margin: 0 -15px
+    position: relative
+    z-index: 10
+    &::after, &::before
+      height: 100%
+      width: 65px
+      position: absolute
+      left: -32px
+      top: 0
+      background-color: #fbfcfc
+      z-index: 5
+      content: ''
+      transform: skewX(-8deg)
+    &::after
+      left: inherit
+      right: -32px
+
+  &__block
+    display: table
+    color: #636363
+    position: relative
+    z-index: 10
+    font-size: rem(13)
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 15px
+      &::first-child
+        text-align: right
+        width: 70px
+    p
+      margin: 0
+    .title
+      font-size: rem(15)
+      font-weight: 500
+      text-transform: uppercase
+      color: $color-waikawa-grey
+      padding-bottom: 15px
+      margin-bottom: 15px
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        left: 0
+        bottom: 0
+        width: 60px
+        height: 2px
+        background: #dbdee3
+
+  [class*=col-]
+    @include first(3)
+      .advantages__block
+        margin-bottom: 45px
+
+/* about */
+.about
+  overflow: hidden
+  &__title
+    font-size: rem(16)
+    font-weight: 400
+    line-height: 1.4
+    margin-bottom: 25px
+
+  &__block
+    display: table
+    font-size: rem(14)
+    &>div
+      display: table-cell
+      vertical-align: top
+      &:first-child
+        width: 70px
+    p
+      line-height: 1.4
+
+  &__carousel
+    position: relative
+    overflow: hidden
+    &::after
+      height: 105%
+      width: 65px
+      position: absolute
+      right: -30px
+      bottom: -1px
+      top: -1px
+      background-color: $color-white
+      z-index: 5
+      content: ''
+      transform: skewX(-6deg)
+
+/* doctors */
+.doctors
+  overflow: hidden
+  padding-bottom: 130px
+  &__row
+    padding-top: 45px
+  &__list
+    padding-left: 30px
+    position: relative
+    z-index: 10
+  &__block
+    display: table
+    margin-bottom: 34px
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 15px
+    .title
+      text-transform: uppercase
+      font-size: rem(16)
+      font-weight: 500
+      color: $color-waikawa-grey
+      line-height: 1.2
+      margin-bottom: 5px
+    small
+      font-size: rem(12)
+      color: #999
+    .img
+      background-color: pink
+      overflow: hidden
+      border-radius: 50%
+  &__img
+    position: absolute
+    margin-top: -40px
+    left: 50%
+    transform: translateX(-50%)
+
+/* certificate */
+.certificate
+  &__carousel
+    width: 200px
+    margin: 0 auto 65px
+
+/* consultation */
+.consultation
+  background: url('../img/consultation/consultation.jpg') center no-repeat
+  height: 330px
+  overflow: hidden
+  padding-top: 0
+  &__label
+    font-size: rem(38)
+    text-transform: uppercase
+    font-weight: 300
+    font-style: italic
+    position: relative
+    // background-color: $color-red
+    color: $color-white
+    margin-bottom: 35px
+    margin-top: 65px
+    padding-left: 55px
+    margin-left: -335px
+    width: 850px
+    letter-spacing: -1px
+    padding-top: 5px
+    padding-bottom: 7px
+    span
+      position: relative
+      z-index: 10
+    strong
+      text-transform: none
+      font-weight: 400
+    &::after, &::before
+      position: absolute
+      z-index: 5
+      height: 51%
+      top: 0
+      left: 0
+      transform: skewX(-10deg)
+      background-color: $color-red
+      content: ''
+      width: 100%
+    &::after
+      bottom: 0
+      top: inherit
+      left: -11px
+      width: calc(100% - 130px)
+
+/* slide */
+.main-slide
+  padding: 0
+  overflow: hidden
+  margin-bottom: 40px
+  &__body
+    width: 1920px
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    &>div
+      position: relative
+      float: left
+      height: 700px
+  &__white
+    background-color: $color-white
+    width: 483px
+    &::after
+      width: 0
+      position: absolute
+      right: -114px
+      top: 0
+      z-index: 5
+      content: ''
+      border-right: 114px solid transparent
+      border-top: 700px solid $color-white
+      border-left: 5px solid $color-white
+  &__img
+    width: 1437px
+    overflow: hidden
+    .img
+      float: left
+    .main-slide__label, .main-slide__label-bottom
+      display: none
+
+  &__label
+    font-size: rem(38)
+    text-transform: uppercase
+    font-weight: 300
+    font-style: italic
+    position: absolute
+    z-index: 50
+    right: -760px
+    // background-color: $color-red
+    color: $color-white
+    margin-bottom: 35px
+    margin-top: 320px
+    padding-left: 55px
+    width: 850px
+    letter-spacing: -1px
+    padding-top: 5px
+    padding-bottom: 7px
+    span
+      position: relative
+      z-index: 10
+    strong
+      text-transform: none
+      font-weight: 400
+    &::after, &::before
+      position: absolute
+      z-index: 5
+      height: 51%
+      top: 0
+      left: 0
+      transform: skewX(-10deg)
+      background-color: $color-red
+      content: ''
+      width: 100%
+    &::after
+      bottom: 0
+      top: inherit
+      left: -11px
+      width: calc(100% - 130px)
+
+  &__label-bottom
+    position: absolute
+    width: 600px
+    right: -486px
+    margin-top: 460px
+    z-index: 50
+    font-size: rem(18)
+    font-style: italic
+    &>*
+      z-index: 50
+      position: relative
+      vertical-align: middle
+    span
+      color: $color-white
+      padding-left: 60px
+      height: 57px
+      display: inline-block
+      line-height: 1.3
+      text-align: right
+      top: 6px
+    &::after
+      position: absolute
+      z-index: 5
+      height: 100%
+      top: 0
+      left: 0
+      transform: skewX(-10deg)
+      background-color: $color-red
+      content: ''
+      width: 100%
+    .icon
+      margin-left: 25px
+
+/* introtitle */
+.introtitle
+  font-size: rem(16)
+  font-weight: 300
+  line-height: 1.4
+  margin-bottom: 25px
+
+.table
+  td
+    p
+      margin-bottom: 0
+      &+p
+        margin-top: 15px
+  &--color
+    margin-bottom: 40px
+    &>thead
+      &>tr
+        &>th
+          background-color: #848a9b
+          color: $color-white
+          font-size: rem(15)
+          text-transform: uppercase
+          border-bottom: 0
+          padding: 10px 20px 8px 20px
+          font-weight: 300
+    &>tbody
+      &>tr
+        &>td
+          padding: 10px 20px 8px 20px
+          border-top: 0
+          border-bottom: 1px solid #f0f0f0
+
+/* services */
+.services
+  &--list
+    margin-bottom: 30px
+  &__head
+    color: $color-white
+    background-color: $color-red
+    text-align: center
+    padding: 17px 5px
+    text-transform: uppercase
+    position: relative
+    transform: skewX(-6deg)
+    &__body
+      transform: skewX(6deg)
+
+  &__block
+    &--list
+      display: table
+      margin-bottom: 30px
+      &>div
+        display: table-cell
+        vertical-align: top
+        &+div
+          padding-left: 10px
+      figure
+        width: 165px
+        .img
+          margin-bottom: 0
+      figcaption
+        .title
+          font-size: rem(18)
+          word-break: break-all
+        small
+          line-height: 1.2
+          display: inline-block
+
+/* .all-articles */
+.all-articles
+  color: $color-red
+  text-decoration: none
+  font-size: rem(12)
+  &:hover
+    text-decoration: underline
+  i
+    margin-right: 10px
+    font-size: rem(14)
+    color: #bebebe
+    vertical-align: middle
+
+/* specialist */
+.specialist
+  &__block
+    text-decoration: none
+    background-color: #fafafa
+    padding: 15px
+    display: table
+    margin-bottom: 25px
+    color: #444444
+    font-size: rem(14)
+    p
+      margin: 0
+      &+p
+        margin-top: 15px
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 15px
+    .img
+      border-radius: 50%
+      display: block
+    &:hover, &:focus, &:active
+      color: #444
+    [class*=ion-]
+      position: absolute
+      font-size: rem(15)
+      color: $color-red
+      margin-top: -5px
+      margin-left: -5px
+    .ion-minus-circled
+      opacity: 1
+    .ion-plus-circled
+      opacity: 0
+    &[aria-expanded='false']
+      .ion-minus-circled
+        opacity: 0
+      .ion-plus-circled
+        opacity: 1
+  &__title
+    font-size: rem(18)
+    text-transform: uppercase
+    color: $header-color
+    font-weight: 500
+    margin-bottom: 20px
+    &+small
+      font-size: rem(12)
+      color: #999999
+      font-weight: 300
+      top: -20px
+      margin-bottom: 0
+      display: inline-block
+      position: relative
+
+/* comments */
+.comments
+  padding-bottom: 10px
+  &__row
+    border-bottom: 1px solid #fafafa
+    margin-bottom: 15px
+    padding-bottom: 15px
+    overflow: hidden
+    p
+      margin: 0
+      &+p
+        margin-top: 10px
+    &:first-child
+      border-top: 1px solid #fafafa
+      padding-top: 15px
+  &__title
+    display: table
+    width: 100%
+    margin-bottom: 5px
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &:last-child
+        text-align: right
+    strong
+      font-size: rem(15)
+  .city
+    color: $color-red
+    font-size: rem(12)
+
+/* pagination */
+.pagination
+  text-align: center
+  color: $color-white
+  font-size: rem(12)
+  margin-bottom: 40px
+  &__body
+    display: inline-block
+    transform: skewX(-6deg)
+    background-color: $color-waikawa-grey
+    padding: 0 20px
+    &>ul
+      display: block
+      transform: skewX(6deg)
+      white-space: nowrap
+      padding: 0
+      margin: 0
+      &>li
+        margin: 0
+        list-style: none
+        display: inline-block
+        &>a, &>span
+          text-decoration: none
+          color: $color-white
+          display: inline-block
+          transform: skewX(-6deg)
+          height: 30px
+          line-height: 30px
+          padding: 0 10px
+          &>span
+            transform: skewX(6deg)
+            display: block
+        &>a
+          &:hover
+            text-decoration: underline
+        &.active
+          &>span, &>a
+            background-color:  #5a647f
+
+/* google map */
+#map_canvas
+  position: relative
+  overflow: hidden
+  height: 0px
+  padding-bottom: 56%
+  background: $color-white
+  margin-bottom: 20px
+  border: 5px solid #ececec
+
+.google-map
+  position: relative
+  height: 0px
+  padding-bottom: 56%
+  background: $color-white
+  border: 5px solid #ececec
+  margin-bottom: 20px
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+
+/* articles */
+.articles
+  margin-bottom: 25px
+  &__row
+    display: table
+    padding: 25px 0
+    border-bottom: 1px solid #fafafa
+    width: 100%
+    &:first-child
+      border-top: 1px solid #fafafa
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 30px
+    .img
+      max-width: 260px
+      width: 260px
+  &__title
+    text-transform: uppercase
+    margin-bottom: 10px
+    font-weight: 500
+    color: #636363
+  .btn
+    text-transform: none
+    font-weight: 300
+  .btn--add
+    &::before
+      background-color: #848a9b
+      border-color: #848a9b
+
+/* page404 */
+.page404
+  position: absolute
+  right: -340px
+  top: 45px
+  &__body
+
+.back
+  display: inline-block
+  background-color: $color-red
+  color: $color-white
+  padding: 0 10px
+  border-radius: 10px
+  text-decoration: none
+  border: 1px solid $color-red
+  &:hover
+    color: $color-white
+    background-color: $color-white
+    color: $color-red
+
+/* services__nav */
+.services__nav
+  &__block
+    &>div
+      max-width: 360px
+      margin: 0 auto
+  &__body
+    margin-bottom: 30px !important
+    ul
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        list-style: none
+        a
+          display: block
+          text-decoration: none
+          // background-color: $color-red
+          transform: skewX(-10deg)
+          span
+            display: block
+            transform: skewX(10deg)
+        &.active
+          &>a
+            background-color: $color-red
+            color: $color-white
+    &>ul
+      font-size: rem(16)
+      &>li
+        &>a
+          font-weight: 500
+          padding: 10px
+          line-height: 1.3
+        &+li
+          border-top: 1px solid #f2f2f2
+
+        &>ul
+          font-size: rem(14)
+          padding-bottom: 10px
+          &>li
+            &>a
+              font-weight: 400
+              padding: 5px 5px 5px 25px
+              color: #636363
+
+  &__title
+    text-transform: uppercase
+    color: $color-red
+    font-weight: 400
+    margin-bottom: 5px
+  &__head
+    position: relative
+
+    .img
+      position: relative
+      overflow: hidden
+      margin-bottom: 15px
+      img
+        position: relative
+        z-index: 1
+        max-width: 100%
+        display: block
+        height: auto
+      &::before, &::after
+        height: 100%
+        width: 25px
+        position: absolute
+        left: -13px
+        top: 0
+        background-color: #fff
+        z-index: 10
+        content: ''
+        transform: skewX(-6deg)
+      &::before
+        left: inherit
+        right: -13px
+      &__background
+        position: absolute
+        z-index: 5
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        height: 100%
+        width: 100%
+        background: -moz-linear-gradient(left, rgba(103,112,137,0.3) 0%, rgba(243,81,79,0.2) 100%)
+        background: -webkit-linear-gradient(left, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
+        background: linear-gradient(to right, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
+
+/* icons */
+.icon
+  display: inline-block
+.icon--advantages1
+  @include sprite($icon-advantage-1)
+.icon--advantages2
+  @include sprite($icon-advantage-2)
+.icon--advantages3
+  @include sprite($icon-advantage-3)
+.icon--advantages4
+  @include sprite($icon-advantage-4)
+.icon--advantages5
+  @include sprite($icon-advantage-5)
+.icon--advantages6
+  @include sprite($icon-advantage-6)
+.icon--advantages7
+  @include sprite($icon-advantage-7)
+
+.icon--about1
+  @include sprite($icon-about-1)
+.icon--about2
+  @include sprite($icon-advantage-5)
+
+.icon--advantage-2-2
+  @include sprite($icon-advantage-2-2)
+.icon--advantage-4-2
+  @include sprite($icon-advantage-4-2)
+.icon--advantage-5-2
+  @include sprite($icon-advantage-5-2)
+.icon--advantage-6-2
+  @include sprite($icon-advantage-6-2)
+.icon--advantage-7
+  @include sprite($icon-advantage-7)

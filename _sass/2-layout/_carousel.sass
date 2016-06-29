@@ -1,0 +1,125 @@
+/* carousel */
+.about__carousel
+  width: 724px
+  float: right
+  margin-right: 26px
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      margin: 0
+
+  .owl-dots
+    text-align: right
+    padding-right: 100px
+    bottom: 50px
+
+.owl-dots
+  position: absolute
+  z-index: 100
+  bottom: 10px
+  width: 100%
+  text-align: center
+  .owl-dot
+    border-radius: 50%
+    height: 12px
+    width: 12px
+    background-color: $color-white
+    display: inline-block
+    margin: 0 4px
+    vertical-align: middle
+    border: 2px solid transparent
+    &.active
+      background-color: transparent
+      border-color: $color-red
+
+/* certificate */
+.certificate
+  &__carousel
+    ul
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        list-style: none
+
+    .owl-dots
+      position: relative
+      bottom: 0
+      margin-top: 15px
+      .owl-dot
+        background-color: #e7ecec
+        &.active
+          background-color: transparent
+
+/* helpful */
+.helpful
+  &__title
+    margin-bottom: 25px
+    text-transform: uppercase
+    padding-bottom: 10px
+    border-bottom: 1px solid $color-red
+  hr
+    border-color: $color-red
+    margin-bottom: 20px
+  &__carousel
+    .services__block--list
+      margin-bottom: 0
+    ul
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        padding: 0
+        list-style: none
+        a
+    border-bottom: 1px solid #eeeff2
+    margin-bottom: 10px
+  .owl-dots
+    position: inherit
+    margin-top: 15px
+    padding-bottom: 20px
+    .owl-dot
+      background-color: #e7ecec
+      &.active
+        background-color: $color-white
+
+/**/
+.img__slider
+  border: 5px solid #ececec
+  margin-bottom: 55px
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 0
+      list-style: none
+      padding: 0
+  .owl-dots
+    bottom: -35px
+    left: 50%
+    transform: translateX(-50%)
+    width: inherit
+    padding: 4px 10px 0 10px
+    height: 30px
+    background-color: $color-white
+    filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.1))
+    &::after, &::before
+      content: ''
+      width: 0
+      height: 0
+      border-top: 30px solid $color-white
+      border-right: 7px solid transparent
+      position: absolute
+      right: -7px
+      bottom: 0
+    &::after
+      right: inherit
+      left: -7px
+      border-right: 0
+      border-left: 7px solid transparent
+    .owl-dot
+      background-color: #e7ecec
+      &.active
+        background-color: $color-white

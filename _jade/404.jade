@@ -1,0 +1,97 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Страница не найдена' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Страница не найдена' + ' - НП-Клиника' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    .loader
+      .loader__block
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ol.breadcrumb
+          li
+            a(href='#') НП-клиника 
+          li.active Страница не найдена
+        
+        .row
+          // Center collumn
+          .col-md-8
+            
+            .section__header.section__header--left
+              .h1 Страница не найдена
+            
+            .page404__body
+              h4 Мы не смогли найти то, что вы ищете на 
+                span.red НП-КЛиника
+              p Пожалуйста, используйте в браузере кнопку 
+                a(href="#").back Назад
+                br
+                | и убедитесь, что вы ввели правельный адрес страницы.
+              p Если вам нужна срочная помощь, пожалуйста, отправьте нам 
+                a(href="#").red письмо
+                |  или напишите через форму.
+              
+              h5 В любом случае не расстраивайтесь, у нас много полезной и актуальной информации.
+            
+            img(src="./img/page404.png", alt="").page404
+            
+            .clear20
+            
+            // Form
+            .form.form--comment.form--404
+              form(action="#")
+                fieldset
+                  legend Форма для вопросов
+                  .row
+                    .col-md-6
+                      .form-group.form--skew
+                        input(type="text" placeholder="введите имя").form-control
+                    .col-md-6
+                      .form-group.form--skew
+                        input(type="text" placeholder="Введите  EMAIL").form-control
+                  .row
+                    .col-md-12
+                      .form-group.form--skew.form--skew--textarea
+                        textarea(name="" placeholder="Введите вопрос").form-control
+                  .row
+                    .col-sm-6
+                      .form-group.form-group--checkbox
+                        label
+                          input(type="checkbox" checked="checked")
+                          span
+                          span Подтвердите, что Вы не спам робот
+                    .col-sm-6
+                      button(type="submit").btn.btn--add.btn--skew.btn--form.btn--mobile
+                        span.span Отправить
+          
+          // Right collumn
+          .col-md-4.hidden-sm.hidden-xs
+            
+    
+    include ./_include/_footer
+    //- div(style="height: 1500px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/respond/respond.min.js'><![endif]
+
+    script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+    script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+    script(src='./js/libs/modernizr/modernizr.js')
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')

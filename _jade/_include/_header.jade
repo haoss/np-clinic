@@ -1,0 +1,78 @@
+// Header
+header.header
+    
+  -var navMenu = { 'Главная': '#', 'О клинике': '#', 'Отзывы': '#', 'Вызов на дом': '#', 'Cтационар': '#', 'Cпециалисты': '#', 'Цены': '#', 'Контакты': '#'};
+  -var footMenu = { 'Главная': '#', 'О клинике': '#', 'Отзывы': '#', 'Статьи': '#', 'Cтационар': '#', 'Cпециалисты': '#', 'Цены': '#'};
+  
+  #popup-consultation2.popup.mfp-hide.popup--thank
+    .popup__title 
+      strong Cпасибо 
+      br
+      | Ваша заявка получена!
+    p.pull-center.nom Скоро мы свяжемся с Вами!
+    
+  #popup-consultation.popup.mfp-hide.popup--form
+    .popup__title Заказать бесплатную 
+      strong консультацию 
+    form(action="#")
+      .form-group.form--skew
+        input(type="text" placeholder="введите имя").form-control
+      .form-group.form--skew
+        input(type="text" placeholder="введите телефон").form-control
+      .form-group.form-group--checkbox
+        label
+          input(type="checkbox")
+          span
+          span Подтвердите, что Вы не спам робот
+      
+      button(type="submit").btn.btn--add.btn--skew.btn--form
+        span.span Отправить
+  
+  .container
+    .header__top
+      
+      nav.navigation(role="navigation")
+        button.btn.btn--skew.dropdown-toggle(type="button" id="headerMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+          span.span
+            | Меню
+            i.ion-navicon
+        ul(aria-labelledby="headerMenu")
+          each val, key in navMenu
+            if active === key
+              li.active
+                a(href=val, title=key)= key
+            else
+              li
+                a(href=val, title=key)= key
+      
+      .header__top__phone 
+        i.ion-android-time
+        strong Анонимно и круглосуточно!
+    
+    .header__bottom
+      div
+        .logo
+          a(href="#")
+            img(src="./img/logo.png", alt="")
+      div.hidden-xs.hidden-sm
+        .header__info Центр неотложной наркологии и психиатрии в Москве и Московской области
+      div.hidden-xs.hidden-sm.hidden-md
+        .header__address Каширское шоссе, 
+          br
+          | дом 58 корпус 3
+      div
+        .header__call
+          div
+            a(href="tel:8-964-539-07-79").header__phone 
+              i.ion-android-call
+              | 8 (964) 539-07-79
+          div.hidden-xs.hidden-sm.hidden-md
+            .header__or или
+          div
+            a(href="#popup-consultation").btn.btn--primary.btn--skew.popup-link
+              span.span Заказать звонок
+  
+.catalog-navigation
+  .container
+    
+    nav(role="navigation") 1

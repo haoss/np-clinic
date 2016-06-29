@@ -1,0 +1,264 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная' + ' - НП-Клиника' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    .loader
+      .loader__block
+    
+    include ./_include/_header
+    
+    // Slide
+    .section.main-slide
+      .main-slide__body
+        .main-slide__white 
+          .block-skew.block-skew--main-slide.small
+          .block-skew.block-skew--main-slide.medium
+          .block-skew.block-skew--main-slide.big
+            
+          .main-slide__label
+            span
+              strong Центр неотложной наркологии и психиатрии
+              br 
+              | в Москве и Московской области
+          
+          .main-slide__label-bottom
+            span Полный комплекс 
+              br
+              | стационарных услуг
+            i.icon.icon--advantage-5-2
+            i.icon.icon--advantage-6-2
+            i.icon.icon--advantage-7
+            i.icon.icon--advantage-4-2
+            i.icon.icon--advantage-2-2
+            
+        .main-slide__img
+          img.img(src="./tmp/slide/slide.png", alt="")
+            
+          .main-slide__label
+            span
+              strong Центр неотложной наркологии и психиатрии
+              br 
+              | в Москве и Московской области
+          
+          .main-slide__label-bottom
+            span Полный комплекс 
+              br
+              | стационарных услуг
+            i.icon.icon--advantage-5-2
+            i.icon.icon--advantage-6-2
+            i.icon.icon--advantage-7
+            i.icon.icon--advantage-4-2
+            i.icon.icon--advantage-2-2
+              
+          .clear
+    
+    // Content
+    .content
+        
+      // Services
+      .section.services
+        .container
+          
+          .block-skew.block-skew--services.visible-lg-block
+          
+          .section__header
+            .h2 наши услуги
+            small НП-КЛИНИКА ЦЕНТР СПЕЦИАЛИЗИРОВАННОЙ ПОМОЩИ ЛЮДЯМ С НАРКОЛОГИЧЕСКИМИ И ПСИХИЧЕСКИМИ ЗАБОЛЕВАНИЯМИ
+          
+          .services__row.row
+            
+            mixin services__block(img, title, intro)
+              .col-sm-4
+                .services__block
+                  figure
+                    .img
+                      .img__background
+                      img(src= img, alt="").img--responsive
+                    figcaption
+                      .title= title
+                      small= intro
+                    a(href="#")
+                      
+            +services__block("./tmp/services/services-1.png","Наркологическая помощь","Детоксикация, вывод из запоя, снятие наркотической ломки, кодирование и др.")
+            +services__block("./tmp/services/services-2.png","Психиатрическая помощь","Консультация, назначение терапии, лечение депрессии, лечение шизофрении и др.")
+            +services__block("./tmp/services/services-3.png","Психотерапевтическая помощь","Психотерапия, реабилитация, гипноз и др.")
+        
+      // Advantages
+      .section.advantages
+        .container
+          
+          .block-skew.block-skew--advantages
+          .block-skew.block-skew--advantages.right
+          
+          .advantages__body
+            .section__header
+              .h2 наши преимущества
+              small Мы по праву считаемся одной из самых технологичных клиник Москвы
+              
+            .advantages__row.row
+              
+              mixin advantages__block(number,title,introtext)
+                .col-sm-4.col-xs-6
+                  .advantages__block
+                    div
+                      i.icon(class='icon--advantages' + number)
+                    div
+                      .title= title
+                      p=introtext 
+              
+              +advantages__block("1","КОЛЛ-ЦЕНТР 24/7","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.")
+              +advantages__block("2","КРУГЛОСУТОЧНЫЙ ВРАЧ","Далеко-далеко за словесными горами.")
+              +advantages__block("3","Современная клиника","Далеко-далеко за словесными горами в стране гласных и согласных живут.")
+              +advantages__block("4","Нет доступа к алкоголю","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.")
+              +advantages__block("5","Комфортные кровати","Далеко-далеко.")
+              +advantages__block("6","4-х разовое питание","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.")
+    
+      // About
+      .section.about
+        .container
+          
+          .block-skew.block-skew--about
+          .block-skew.block-skew--about.small
+          
+          .row
+            .col-lg-8.col-lg-push-4.col-sm-7.col-sm-push-5 
+              
+              .section__header.section__header--left
+                h2 о клинике
+                small В нашу компетенцию входит весь спектр наркологической и психиатрической помощи по стандартам медицинской помощи в РФ
+                
+              p.about__title Наша клиника осуществляет два вида лечебных мероприятий, оказываемых бригадой наркологической помощи.
+              
+              .about__row.row
+                mixin about__block(number,introtext)
+                  .col-md-6
+                    .about__block
+                      div
+                        i.icon(class='icon--about' + number)
+                      div
+                        p=introtext 
+                
+                +about__block("1","Медицинские меры, не сопровождаемые госпитализацией больного. Помощь с широким кругом состояний, не страдающих тяжелыми психическими и соматическими расстройствами. В этих случаях неотложная помощь может быть оказана амбулаторно на дому.")
+                +about__block("2","Медицинские меры, сопровождаемые госпитализацией больного. В условиях стационара используется весь арсенал терапевтических средств. Комфортные условия пребывания помогают быстрейшему восстановлению пациента после интоксикации от психоактивных веществ.")
+                
+              a(href="#").btn.btn--add.btn--skew.hidden-sm
+                span.span Подробнее
+              
+            .col-lg-4.col-lg-pull-8.col-sm-5.col-sm-pull-7 
+            
+              .about__carousel
+                ul
+                  - for (var i=1; i<=3; i++) {
+                    li: img(src="./tmp/about/about-1.png", alt="")
+                  - }
+              
+              .pull-right.visible-sm-inline-block
+                a(href="#").btn.btn--add.btn--skew
+                  span.span Подробнее
+              
+      // Doctors
+      .section.doctors
+        .container
+          
+          .block-skew.block-skew--doctors
+          
+          .section__header
+            h2 наши врачи и сертификаты
+            small Наши врачи имеют за плечами многолетний опыт и регулярно участвуют в конгрессах и мастер-классах
+            
+          .doctors__row.row
+            .col-md-4.col-sm-5
+              
+              mixin doctors__block(number,title,position)
+                .doctors__block
+                  div
+                    .img
+                      img(src="./tmp/doctors/doctors-list" + number + ".png", alt="")
+                  div
+                    .title= title
+                    small= position
+                    
+              .doctors__list
+                +doctors__block("1","Антипенко Виктор Николаевич","Ведущий психиатр-нарколог")
+                +doctors__block("2","Чугунов Дмитрий Александрович","Сертифицированный психотерапевт")
+                +doctors__block("3","Павличенко Алексей Викторович","Ведущий психиатр")
+                +doctors__block("4","Сомова Вероника Михайловна","Ведущий психиатр")
+              
+              .pull-center
+                a(href="#").btn.btn--add.btn--skew.btn--mobile
+                  span.span Все врачи
+              
+              .visible-xs
+                .clear50
+                
+            .col-md-4.col-sm-3.hidden-xs
+              .doctors__img
+                img.visible-lg-block(src="./img/doctors/doctors-lg.png", alt="")
+                img.visible-md-block(src="./img/doctors/doctors-md.png", alt="")
+                img.visible-sm-block(src="./img/doctors/doctors-sm.png", alt="")
+                  
+            .col-md-4.col-sm-4
+              .certificate__carousel
+                ul
+                  - for (var i=1; i<=3; i++) {
+                    li: a(href="./tmp/certificate/certificate.png" title="Название").image-popup
+                      img(src="./tmp/certificate/certificate.png", alt="")
+                  - }
+                
+              .pull-center
+                a(href="#").btn.btn--add.btn--skew.btn--mobile
+                  span.span Все сертификаты
+    
+      // Consultation
+      .section.consultation
+        .container
+          
+          .block-skew.block-skew--consultation.small
+          .block-skew.block-skew--consultation.medium
+          .block-skew.block-skew--consultation.big
+          
+          .row
+            .col-md-3.col-sm-4
+            .col-md-9.col-sm-8
+              .consultation__label
+                span
+                  strong Получите сейчас бесплатную консультацию 
+                  br
+                  | и мы вам обязательно поможем
+              form(action="#")
+                .row
+                  .col-lg-4.col-md-4
+                    .form-group.form--skew.has-error
+                      input(type="text" placeholder="введите имя").form-control
+                  .col-lg-4.col-md-4
+                    .form-group.form--skew
+                      input(type="text" placeholder="введите телефон").form-control
+                  .col-lg-4.col-md-2
+                    .form-group.form-group--button
+                      button(type="submit").btn.btn--add.btn--skew.btn--mobile
+                        span.span отправить
+              
+    
+    include ./_include/_footer
+    //- div(style="height: 1500px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/respond/respond.min.js'><![endif]
+
+    script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+    script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+    script(src='./js/libs/modernizr/modernizr.js')
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')

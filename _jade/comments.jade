@@ -1,0 +1,113 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Отзывы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Отзывы о клинике' + ' - НП-Клиника' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    .loader
+      .loader__block
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ol.breadcrumb
+          li
+            a(href='#') НП-клиника 
+          li.active Отзывы
+        
+        .row
+          // Center collumn
+          .col-sm-8
+            
+            .section__header.section__header--left
+              .h1 Отзывы о клинике
+            
+            p.introtitle Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+            
+            // Comments
+            .comments
+              mixin comments__row(name, city, comments)
+                .comments__row
+                  .comments__title
+                    div: strong= name
+                    div: .city= city
+                  time.time 4 января 2016
+                    
+                  p= comments
+                        
+              +comments__row("Игорь К. говорит:","г. Курган","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.")
+              +comments__row("Роман говорит:","г. Орел","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.")
+              +comments__row("Олеся О. говорит:","г. Москва","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.")
+              +comments__row("Игорь К. говорит:","г. Курган","Далеко-далеко за словесными горами")
+              +comments__row("Роман говорит:","г. Орел","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.")
+              +comments__row("Олеся О. говорит:","г. Москва","Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.")
+          
+            nav.pagination
+              .pagination__body
+                ul
+                  li: a(href='#'): span В начало
+                  li: a(href='#'): span 1
+                  li: a(href='#'): span 2
+                  li: a(href='#'): span 3
+                  li.active: span: span 4
+                  li: a(href='#'): span ...
+                  li: a(href='#'): span В конец
+                  
+            // Form
+            .form.form--comment
+              form(action="#")
+                fieldset
+                  legend Форма для отзывов
+                  .row
+                    .col-md-6
+                      .form-group.form--skew
+                        input(type="text" placeholder="введите имя").form-control
+                    .col-md-6
+                      .form-group.form--skew
+                        input(type="text" placeholder="Введите  EMAIL").form-control
+                  .row
+                    .col-md-12
+                      .form-group.form--skew.form--skew--textarea
+                        textarea(name="" placeholder="Введите вопрос").form-control
+                  .row
+                    .col-md-6
+                      .form-group.form-group--checkbox
+                        label
+                          input(type="checkbox" checked="checked")
+                          span
+                          span Подтвердите, что Вы не спам робот
+                    .col-md-6
+                      button(type="submit").btn.btn--add.btn--skew.btn--form.btn--mobile
+                        span.span Отправить
+                    
+          
+          // Right collumn
+          .col-sm-4
+            
+            include _include/_right_collumn
+    
+    include ./_include/_footer
+    //- div(style="height: 1500px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/respond/respond.min.js'><![endif]
+
+    script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+    script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+    script(src='./js/libs/modernizr/modernizr.js')
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')

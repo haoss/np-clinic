@@ -1,0 +1,29 @@
+<!-- Footer -->
+footer.footer
+  .container
+    
+    .footer__row
+      div
+        .footer__address
+          p Москва, Каширское шоссе, дом 58 корпус 3
+          a(href="tel:8-964-539-07-79").footer__phone
+            i.ion-android-call
+            | 8 (964) 539-07-79
+      
+      div
+        nav.footer__navigation
+          button.btn.btn--skew.dropdown-toggle(type="button" id="footerMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+            span.span
+              | Меню
+              i.ion-navicon
+          ul(aria-labelledby="footerMenu")
+            each val, key in footMenu
+              if active === key
+                li.active
+                  a(href=val, title=key)= key
+              else
+                li
+                  a(href=val, title=key)= key
+                  
+        .copiryght &copy; 2016. Центр наркологии и психиатрии «НП-Клиника»
+  

@@ -1,0 +1,70 @@
+// Services list
+.services.services--list
+  h2.services__head
+    .services__head__body Наши услуги
+    
+  mixin services__block-right(img, title, intro)
+    .services__block.services__block--list
+      div.hidden-sm
+        figure
+          .img
+            .img__background
+            img(src= img, alt="").img--responsive
+      div
+        figcaption
+          .title= title
+          small= intro
+      a(href="#")
+            
+  +services__block-right("./tmp/services/services-1.png","Наркологическая помощь","Детоксикация, вывод из запоя, снятие наркотической ломки, кодирование и др.")
+  +services__block-right("./tmp/services/services-2.png","Психиатрическая помощь","Консультация, назначение терапии, лечение депрессии, лечение шизофрении и др.")
+  +services__block-right("./tmp/services/services-3.png","Психотерапевтическая помощь","Психотерапия, реабилитация, гипноз и др.")
+    
+// Form
+.form.form--block
+  .form__head 
+    .form__head__body
+      strong Запишитесь на бесплатную консультацию 
+      br
+      | и мы вам обязательно поможем
+    
+  form(action="#")
+    .form-group.form--skew
+      input(type="text" placeholder="введите имя").form-control
+    .form-group.form--skew
+      input(type="text" placeholder="введите телефон").form-control
+    .form-group.form-group--checkbox
+      label
+        input(type="checkbox")
+        span
+        span Подтвердите, что Вы не спам робот
+    
+    button(type="submit").btn.btn--add.btn--skew.btn--form
+      span.span Отправить
+
+// helpful information
+.helpful
+  h3.helpful__title Полезная информация
+  mixin services__block-right(img, title, intro)
+    li
+      .services__block.services__block--list
+        div.hidden-sm
+          figure
+            .img
+              .img__background
+              img(src= img, alt="").img--responsive
+        div
+          figcaption
+            .title= title
+            small= intro
+        a(href="#")
+  
+  .helpful__carousel
+    ul
+      +services__block-right("./tmp/services/services-1.png","Наркологическая помощь","Детоксикация, вывод из запоя, снятие наркотической ломки, кодирование и др.")
+      +services__block-right("./tmp/services/services-2.png","Психиатрическая помощь","Консультация, назначение терапии, лечение депрессии, лечение шизофрении и др.")
+      +services__block-right("./tmp/services/services-3.png","Психотерапевтическая помощь","Психотерапия, реабилитация, гипноз и др.")
+  
+  a(href="#").all-articles
+    i.ion-ios-list-outline
+    span Все статьи

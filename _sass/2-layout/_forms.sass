@@ -1,0 +1,220 @@
+/* forms */
+
+::-webkit-input-placeholder
+  color: $color-waikawa-grey
+::-moz-placeholder
+  color: $color-waikawa-grey
+:-ms-input-placeholder
+  color: $color-waikawa-grey
+input:-moz-placeholder
+  color: $color-waikawa-grey
+
+button, input, optgroup, select, textarea
+  margin: 0
+  font: inherit
+  color: inherit
+
+button, html input[type=button], input[type=reset], input[type=submit]
+  -webkit-appearance: button
+  cursor: pointer
+
+.form
+  &-group
+    margin-bottom: 20px
+
+    &--checkbox
+      font-size: rem(13)
+      label
+        margin: 0
+        position: relative
+        padding-left: 30px
+        font-weight: 400
+        cursor: pointer
+      [type='checkbox']
+        display: none
+        &:checked
+          &+span
+            border-width: 6px
+        &+span
+          display: inline-block
+          height: 21px
+          width: 21px
+          border: 1px solid $color-red
+          border-radius: 3px
+          margin-left: -30px
+          position: absolute
+          background-color: $color-white
+          &+span
+            padding-top: 3px
+            display: inline-block
+
+  &-control, &--skew
+    display: block
+    width: 100%
+    height: 38px
+    padding: 8px 15px 6px 15px
+    font-size: rem(14)
+    font-family: $primary-font
+    line-height: 1.42857143
+    color: $color-waikawa-grey
+    background-color: $color-white
+    background-image: none
+    border: 1px solid $color-gray
+    border-radius: 4px
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+  &--skew
+    &--textarea
+      height: 100px
+      textarea
+        height: 100px
+        resize: none
+
+label
+  display: inline-block
+  max-width: 100%
+  margin-bottom: 5px
+  font-weight: 700
+
+.has
+  &-success .form-control
+    border-color: #3c763d
+    box-shadow: inset 0 1px 1px rgba(#3c763d,.75)
+
+  &-warning .form-control
+    border-color: #8a6d3b
+    box-shadow: inset 0 1px 1px rgba(#8a6d3b,.75)
+
+  &-error .form-control
+    border-color: #a94442
+    box-shadow: inset 0 1px 1px rgba(#a94442,.75)
+
+  &-success .control-label
+    color: #3c763d
+
+  &-warning .control-label
+    color: #8a6d3b
+
+  &-error .control-label
+    color: #a94442
+
+/* form skew */
+.form
+  &--skew
+    transform: skewX(-6deg)
+    padding: 0
+    border-color: transparent
+    border-radius: 0
+    overflow: hidden
+    box-shadow: none
+    .form-control
+      background: none
+      border-radius: 0
+      box-shadow: none
+      border: 0
+      transform: skewX(6deg)
+      text-transform: uppercase
+      margin-top: -1px
+      &:focus
+        border: 0
+        box-shadow: none
+    &.has-error
+      border: 1px solid rgba(169, 68, 66, 0.75)
+      box-shadow: none
+
+/**/
+.popup
+  position: relative
+  background-color: #fafafa
+  padding: 35px 30px
+  width: auto
+  max-width: 445px
+  margin: 20px auto
+  border: 5px solid transparent
+  border-image: linear-gradient(to bottom, #f8a8a7 0%, #adb1bf 100%)
+  border-image-slice: 1
+  font-size: rem(16)
+  &__title
+    font-size: rem(20)
+    text-align: center
+    color: $header-color
+    font-weight: 400
+    text-transform: uppercase
+    line-height: 1.3
+    margin-bottom: 20px
+    strong
+      font-size: rem(24)
+  p:last-child
+    margin-bottom: 0
+
+  &--form
+    max-width: 330px
+
+  &--thank
+    background-image: url('../img/popup-thank.png')
+    background-position: right bottom
+    background-repeat: no-repeat
+    height: 172px
+  &--form
+    background-image: url('../img/popup-form.png')
+    background-position: right bottom
+    background-repeat: no-repeat
+
+
+
+.mfp-close
+  &--text
+    color: #686868
+    font-size: rem(11)
+    padding: 0 10px !important
+    height: 25px
+    line-height: 25px
+    width: auto
+    opacity: 1
+
+/* form */
+.form
+  &__head
+    color: $color-white
+    background-color: $color-red
+    text-align: center
+    padding: 0 5px
+    text-transform: uppercase
+    position: relative
+    transform: skewX(-6deg)
+    font-size: rem(19)
+    margin: 0 -40px 20px -40px
+    font-style: italic
+    letter-spacing: -0.5px
+    strong
+      font-size: rem(16)
+      text-transform: none
+    &__body
+      transform: skewX(6deg)
+  &--block
+    border: 5px solid #ececec
+    margin: 0 20px 50px 20px
+    padding: 20px
+    background:
+      color: $color-white
+      image: url("../img/popup-thank2.png")
+      position: right bottom
+      repeat: no-repeat
+    .form--skew
+      background:
+        color: #fafafa
+
+.form
+  &--comment
+    background-color: #fafafa
+    padding: 20px
+    fieldset
+      border: 0
+    legend
+      border: 0
+      text-transform: uppercase
+      font-size: rem(20)
+      color: $header-color
+      font-weight: 500
+    .btn--form
+      margin-right: inherit

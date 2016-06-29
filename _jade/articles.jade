@@ -1,0 +1,80 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Статьи' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Статьи' + ' - НП-Клиника' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    .loader
+      .loader__block
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ol.breadcrumb
+          li
+            a(href='#') НП-клиника 
+          li.active Статьи
+        
+        .row
+          // Center collumn
+          .col-sm-8
+            
+            .section__header.section__header--left
+              .h1 Статьи
+            
+            h4 Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+            
+            // Articles
+            .articles
+              - for (var i=1; i<=3; i++) {
+                .articles__row
+                  div.img
+                    img(src="./tmp/about/about-1.png", alt="").img--responsive
+                  div
+                    h4.articles__title Правильная транспортировка в клинику круглосуточно и анонимно
+                    p.introtext Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+                    a(href="#").btn.btn--add.btn--skew.btn--small
+                      span.span Подробнее
+              - }
+            
+            nav.pagination
+              .pagination__body
+                ul
+                  li: a(href='#'): span В начало
+                  li: a(href='#'): span 1
+                  li: a(href='#'): span 2
+                  li: a(href='#'): span 3
+                  li.active: span: span 4
+                  li: a(href='#'): span ...
+                  li: a(href='#'): span В конец
+          
+          // Right collumn
+          .col-sm-4
+            
+            include _include/_right_collumn
+    
+    include ./_include/_footer
+    //- div(style="height: 1500px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/respond/respond.min.js'><![endif]
+
+    script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+    script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+    script(src='./js/libs/modernizr/modernizr.js')
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
