@@ -184,3 +184,16 @@ function simpleForm(form, callback) {
         return false;
     });
 }
+
+/*$(window).resize(function(){
+  var width = $(window).width();
+
+  if (width <= 991 && width > 767 ) {
+    $('.catalog-navigation nav .dropdown:last-child').hide();
+  } else if (width <= 767 ) {
+    $('.catalog-navigation nav').hide();
+  } else {
+    $('.catalog-navigation nav .dropdown:last-child').show();
+    $('.catalog-navigation nav').show();
+  }
+})*/

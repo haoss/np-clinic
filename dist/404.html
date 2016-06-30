@@ -90,73 +90,170 @@
             </div>
         </header>
         <div class="catalog-navigation">
-            <div class="container">
-                <nav role="navigation">
-                    <ul>
+            <div class="container open">
+                <button type="button" id="catalogMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn dropdown-toggle"><span class="span">Меню<i class="ion-navicon"></i></span></button>
+                <ul aria-labelledby="catalogMenu">
+                    <div id="accordion" class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"><span class="glyphicon glyphicon-folder-close"></span>Content</a></h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">Articles</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.jquery2dotnet.com">News</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-file text-info"></span><a href="http://www.jquery2dotnet.com">Newsletters</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-comment text-success"></span><a href="http://www.jquery2dotnet.com">Comments</a><span class="badge">42</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"><span class="glyphicon glyphicon-th"></span>Modules</a></h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td><a href="http://www.jquery2dotnet.com">Orders</a><span class="label label-success">$ 320</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.jquery2dotnet.com">Invoices</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.jquery2dotnet.com">Shipments</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.jquery2dotnet.com">Tex</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>Account</a></h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td><a href="http://www.jquery2dotnet.com">Change Password</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.jquery2dotnet.com">Notifications</a><span class="label label-info">5</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://www.jquery2dotnet.com">Import/Export</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">Delete Account</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"><span class="glyphicon glyphicon-file"></span>Reports</a></h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-usd"></span><a href="http://www.jquery2dotnet.com">Sales</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-user"></span><a href="http://www.jquery2dotnet.com">Customers</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-tasks"></span><a href="http://www.jquery2dotnet.com">Products</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="glyphicon glyphicon-shopping-cart"></span><a href="http://www.jquery2dotnet.com">Shopping Cart</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <nav role="navigation" style="display: none">
+                    <ul class="catalog-navigation__ul">
                         <li class="dropdown"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
                                  
                                 Наркологическая помощь<i class="ion-ios-arrow-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span>Нарколог на дом</span></a>
+                                <li><a href="#">Нарколог на дом</a>
                                     <ul>
-                                        <li><a href="#"><span>Детоксикация</span></a></li>
-                                        <li><a href="#"><span>Вывод из запоя</span></a></li>
-                                        <li><a href="#"><span>Снятие наркотической ломки</span></a></li>
-                                        <li><a href="#"><span>Кодирование</span></a></li>
+                                        <li><a href="#">Детоксикация</a></li>
+                                        <li><a href="#">Вывод из запоя</a></li>
+                                        <li><a href="#">Снятие наркотической ломки</a></li>
+                                        <li><a href="#">Кодирование</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#"><span>Лечение алкоголизма </span></a>
+                                <li><a href="#">Лечение алкоголизма</a>
                                     <ul>
-                                        <li class="active"><a href="#"><span>Лечебная программа</span></a></li>
-                                        <li><a href="#"><span>Кодирование</span></a></li>
+                                        <li class="active"><a href="#">Лечебная программа</a></li>
+                                        <li><a href="#">Кодирование</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#"><span>Лечение наркозависимости</span></a>
+                                <li><a href="#">Лечение наркозависимости</a>
                                     <ul><a href="#"></a>
-                                        <li><a href="#"><span>Лечебная программа </span></a></li>
-                                        <li><a href="#"><span>Кодирование</span></a></li>
+                                        <li><a href="#">Лечебная программа </a></li>
+                                        <li><a href="#">Кодирование</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#"><span>Лечение табакокурения</span></a></li>
-                                <li><a href="#"><span>Лечение игромании</span></a></li>
+                                <li><a href="#">Лечение табакокурения</a></li>
+                                <li><a href="#">Лечение игромании</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
                                  
                                 Психиатрическая помощь<i class="ion-ios-arrow-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span>Психиатр на дом</span></a>
+                                <li><a href="#">Психиатр на дом</a>
                                     <ul>
-                                        <li><a href="#"><span>Консультация</span></a></li>
-                                        <li><a href="#"><span>Назначение терапии</span></a></li>
+                                        <li><a href="#">Консультация</a></li>
+                                        <li><a href="#">Назначение терапии</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#"><span>Лечение депрессии </span></a></li>
-                                <li><a href="#"><span>Лечение шизофрении</span></a></li>
-                                <li class="active"><a href="#"><span>Лечение неврологических расстройств</span></a></li>
-                                <li><a href="#"><span>Лечение деменции</span></a></li>
-                                <li><a href="#"><span>Детский психиатр</span></a></li>
-                                <li><a href="#"><span>Психиатр для пожилых пациентов</span></a></li>
+                                <li><a href="#">Лечение депрессии </a></li>
+                                <li><a href="#">Лечение шизофрении</a></li>
+                                <li class="active"><a href="#">Лечение неврологических расстройств</a></li>
+                                <li><a href="#">Лечение деменции</a></li>
+                                <li><a href="#">Детский психиатр</a></li>
+                                <li><a href="#">Психиатр для пожилых пациентов</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
                                  
                                 Психотерапевтическая помощь<i class="ion-ios-arrow-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"> <span>Психотерапия при алкогольной и наркотической зависимости</span></a></li>
-                                <li><a href="#"> <span>Реабилитация 12 шагов</span></a></li>
-                                <li><a href="#"> <span>Психотерапия пси психических расстройствах</span></a></li>
-                                <li><a href="#"> <span>Гипноз</span></a></li>
-                                <li><a href="#"> <span>Когнитивно-поведенческая психотерапия</span></a></li>
+                                <li><a href="#">Психотерапия при алкогольной и наркотической зависимости</a></li>
+                                <li><a href="#">Реабилитация 12 шагов</a></li>
+                                <li><a href="#">Психотерапия пси психических расстройствах</a></li>
+                                <li><a href="#">Гипноз</a></li>
+                                <li><a href="#">Когнитивно-поведенческая психотерапия</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
                                  
                                 Диагностика<i class="ion-ios-arrow-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"> <span>Тестирование(анализ) на наркотические вещества</span></a></li>
-                                <li><a href="#"> <span>Диагностика по крови на психические заболевания</span></a></li>
-                                <li><a href="#"> <span>Оценка лечебно-реабилитационного потенциала</span></a></li>
+                                <li><a href="#">Тестирование(анализ) на наркотические вещества</a></li>
+                                <li><a href="#">Диагностика по крови на психические заболевания</a></li>
+                                <li><a href="#">Оценка лечебно-реабилитационного потенциала</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -73,114 +73,195 @@ header.header
               span.span Заказать звонок
   
 .catalog-navigation
-  .container
-    
-    nav(role="navigation")
-      ul
+  .container.open
+    button.btn.dropdown-toggle(type="button" id="catalogMenu" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true")
+      span.span
+        | Меню
+        i.ion-navicon
+    ul(aria-labelledby="catalogMenu")
+      #accordion.panel-group
+        .panel.panel-default
+          .panel-heading
+            h4.panel-title
+              a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne' aria-expanded="false")
+                span.glyphicon.glyphicon-folder-close
+                | Content
+          #collapseOne.panel-collapse.collapse
+            .panel-body
+              table.table
+                tr
+                  td
+                    span.glyphicon.glyphicon-pencil.text-primary
+                    a(href='http://www.jquery2dotnet.com') Articles
+                tr
+                  td
+                    span.glyphicon.glyphicon-flash.text-success
+                    a(href='http://www.jquery2dotnet.com') News
+                tr
+                  td
+                    span.glyphicon.glyphicon-file.text-info
+                    a(href='http://www.jquery2dotnet.com') Newsletters
+                tr
+                  td
+                    span.glyphicon.glyphicon-comment.text-success
+                    a(href='http://www.jquery2dotnet.com') Comments
+                    span.badge 42
+        .panel.panel-default
+          .panel-heading
+            h4.panel-title
+              a(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo' aria-expanded="false")
+                span.glyphicon.glyphicon-th
+                | Modules
+          #collapseTwo.panel-collapse.collapse
+            .panel-body
+              table.table
+                tr
+                  td
+                    a(href='http://www.jquery2dotnet.com') Orders
+                    span.label.label-success $ 320
+                tr
+                  td
+                    a(href='http://www.jquery2dotnet.com') Invoices
+                tr
+                  td
+                    a(href='http://www.jquery2dotnet.com') Shipments
+                tr
+                  td
+                    a(href='http://www.jquery2dotnet.com') Tex
+        .panel.panel-default
+          .panel-heading
+            h4.panel-title
+              a(data-toggle='collapse', data-parent='#accordion', href='#collapseThree' aria-expanded="false")
+                span.glyphicon.glyphicon-user
+                | Account
+          #collapseThree.panel-collapse.collapse
+            .panel-body
+              table.table
+                tr
+                  td
+                    a(href='http://www.jquery2dotnet.com') Change Password
+                tr
+                  td
+                    a(href='http://www.jquery2dotnet.com') Notifications
+                    span.label.label-info 5
+                tr
+                  td
+                    a(href='http://www.jquery2dotnet.com') Import/Export
+                tr
+                  td
+                    span.glyphicon.glyphicon-trash.text-danger
+                    a.text-danger(href='http://www.jquery2dotnet.com')
+                      | Delete Account
+        .panel.panel-default
+          .panel-heading
+            h4.panel-title
+              a(data-toggle='collapse', data-parent='#accordion', href='#collapseFour' aria-expanded="false")
+                span.glyphicon.glyphicon-file
+                | Reports
+          #collapseFour.panel-collapse.collapse
+            .panel-body
+              table.table
+                tr
+                  td
+                    span.glyphicon.glyphicon-usd
+                    a(href='http://www.jquery2dotnet.com') Sales
+                tr
+                  td
+                    span.glyphicon.glyphicon-user
+                    a(href='http://www.jquery2dotnet.com') Customers
+                tr
+                  td
+                    span.glyphicon.glyphicon-tasks
+                    a(href='http://www.jquery2dotnet.com') Products
+                tr
+                  td
+                    span.glyphicon.glyphicon-shopping-cart
+                    a(href='http://www.jquery2dotnet.com') Shopping Cart
+      
+    nav(role="navigation" style="display: none")
+      ul.catalog-navigation__ul
         li.dropdown
           a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
             | Наркологическая помощь
             i.ion-ios-arrow-down
           ul.dropdown-menu
             li
-              a(href='#')
-                span Нарколог на дом
+              a(href='#') Нарколог на дом
               ul
                 li
-                  a(href='#')
-                    span Детоксикация
+                  a(href='#') Детоксикация
                 li
-                  a(href='#')
-                    span Вывод из запоя
+                  a(href='#') Вывод из запоя
                 li
-                  a(href='#')
-                    span Снятие наркотической ломки
+                  a(href='#') Снятие наркотической ломки
                 li
-                  a(href='#')
-                    span Кодирование
+                  a(href='#') Кодирование
             li
-              a(href='#')
-                span Лечение алкоголизма 
+              a(href='#') Лечение алкоголизма
               ul
                 li.active
-                  a(href='#')
-                    span Лечебная программа
+                  a(href='#') Лечебная программа
                 li
-                  a(href='#')
-                    span Кодирование
+                  a(href='#') Кодирование
             li
-              a(href='#')
-                span Лечение наркозависимости
+              a(href='#') Лечение наркозависимости
               ul
                 a(href='#')
                 li
-                  a(href='#')
-                    span Лечебная программа 
+                  a(href='#') Лечебная программа 
                 li
-                  a(href='#')
-                    span Кодирование
+                  a(href='#') Кодирование
             li
-              a(href='#')
-                span Лечение табакокурения
+              a(href='#') Лечение табакокурения
             li
-              a(href='#')
-                span Лечение игромании
+              a(href='#') Лечение игромании
         li.dropdown
           a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
             | Психиатрическая помощь
             i.ion-ios-arrow-down
           ul.dropdown-menu
             li
-              a(href='#')
-                span Психиатр на дом
+              a(href='#') Психиатр на дом
               ul
                 li
-                  a(href='#')
-                    span Консультация
+                  a(href='#') Консультация
                 li
-                  a(href='#')
-                    span Назначение терапии
+                  a(href='#') Назначение терапии
             li
-              a(href='#')
-                span Лечение депрессии 
+              a(href='#') Лечение депрессии 
             li
-              a(href='#')
-                span Лечение шизофрении
+              a(href='#') Лечение шизофрении
             li.active
-              a(href='#')
-                span Лечение неврологических расстройств
+              a(href='#') Лечение неврологических расстройств
             li
-              a(href='#')
-                span Лечение деменции
+              a(href='#') Лечение деменции
             li
-              a(href='#')
-                span Детский психиатр
+              a(href='#') Детский психиатр
             li
-              a(href='#')
-                span Психиатр для пожилых пациентов
+              a(href='#') Психиатр для пожилых пациентов
         li.dropdown
           a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
             | Психотерапевтическая помощь
             i.ion-ios-arrow-down
           ul.dropdown-menu
-            li: a(href="#") 
-              span Психотерапия при алкогольной и наркотической зависимости
-            li: a(href="#") 
-              span Реабилитация 12 шагов
-            li: a(href="#") 
-              span Психотерапия пси психических расстройствах
-            li: a(href="#") 
-              span Гипноз
-            li: a(href="#") 
-              span Когнитивно-поведенческая психотерапия
+            li
+              a(href="#") Психотерапия при алкогольной и наркотической зависимости
+            li
+              a(href="#") Реабилитация 12 шагов
+            li
+              a(href="#") Психотерапия пси психических расстройствах
+            li
+              a(href="#") Гипноз
+            li
+              a(href="#") Когнитивно-поведенческая психотерапия
         li.dropdown
           a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
             | Диагностика
             i.ion-ios-arrow-down
           ul.dropdown-menu
-            li: a(href="#") 
-              span Тестирование(анализ) на наркотические вещества
-            li: a(href="#") 
-              span Диагностика по крови на психические заболевания
-            li: a(href="#") 
-              span Оценка лечебно-реабилитационного потенциала
+            li
+              a(href="#") Тестирование(анализ) на наркотические вещества
+            li
+              a(href="#") Диагностика по крови на психические заболевания
+            li
+              a(href="#") Оценка лечебно-реабилитационного потенциала
