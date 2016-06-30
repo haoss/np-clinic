@@ -110,9 +110,6 @@ $(document).ready(function(){
     $(this).prepend('<i class="ion-checkmark-circled"></i>');
   });
 
-  // Bootstrap submenu
-  $('[data-submenu]').submenupicker();
-
   // simpleForm
   simpleForm('form.form-callback');
 })
