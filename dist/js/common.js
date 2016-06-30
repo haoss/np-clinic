@@ -110,6 +110,8 @@ $(document).ready(function(){
     $(this).prepend('<i class="ion-checkmark-circled"></i>');
   });
 
+  // Bootstrap submenu
+  $('[data-submenu]').submenupicker();
 
   // simpleForm
   simpleForm('form.form-callback');
@@ -185,15 +187,26 @@ function simpleForm(form, callback) {
     });
 }
 
-/*$(window).resize(function(){
+// Catalog Navigation mobile resize
+function catalogNavigation(){
   var width = $(window).width();
+  /*var dropdownLength = $('#catalogNavDesctop .dropdown').length;
+  var accordionPanel = $('#catalogNavMobile .panel').length;
+  console.log(dropdownLength);
+  console.log(accordionPanel);*/
 
   if (width <= 991 && width > 767 ) {
-    $('.catalog-navigation nav .dropdown:last-child').hide();
-  } else if (width <= 767 ) {
-    $('.catalog-navigation nav').hide();
-  } else {
-    $('.catalog-navigation nav .dropdown:last-child').show();
-    $('.catalog-navigation nav').show();
+    $('#catalogNavDesctop .dropdown').slice(3).hide();
+    $('#catalogNavMobile .panel').slice(0,3).hide();
   }
-})*/
+  else if (width < 767 ) {
+    $('#catalogNavMobile .panel').show();
+  }
+  else if (width > 991 ) {
+    $('#catalogNavDesctop .dropdown').show();
+    $('#catalogNavMobile .panel').show();
+  }
+}
+
+$(window).resize(catalogNavigation);
+$(window).ready(catalogNavigation);
