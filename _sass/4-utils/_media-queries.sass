@@ -45,6 +45,8 @@
   .doctors
     &__list
       padding-left: 0
+      &+.btn
+        margin-left: 0px
 
   .consultation
     background-position: calc(50% + 85px) center
@@ -74,7 +76,6 @@
     &__img
       width: 979px
 
-  .main-slide
     &__label
       margin-top: 285px
       &-bottom
@@ -111,6 +112,12 @@
 
     &__body
       width: 535px
+
+  .about
+    .section__header
+      padding-top: 0
+
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -442,6 +449,12 @@
       .owl-dots
         padding-right: 25px
 
+    .section__header
+      text-align: center
+      &::after
+        left: 50%
+        transform: translateX(-50%)
+
   .doctors
     padding-bottom: 50px
     &__row
@@ -449,6 +462,9 @@
     &__block
       .title
         font-size: rem(20)
+    &__list
+      &+.btn
+        margin-left: auto
 
   .btn
     &--mobile
@@ -639,6 +655,8 @@
         &:first-child
           width: 55px
 
+
+
   .main-slide
     &__label
       &-bottom
@@ -670,9 +688,9 @@
       &--list
         figure
           width: 80px
-        figcaption
-          .title
-            font-size: rem(18)
+      figcaption
+        .title
+          font-size: rem(16)
 
   .advantages
     [class*=col-]

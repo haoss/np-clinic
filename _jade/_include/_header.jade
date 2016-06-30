@@ -77,7 +77,10 @@ header.header
     
     nav(role="navigation")
       ul
-        li: a(href="#") Наркологическая помощь
+        li.dropdown
+          a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
+            | Наркологическая помощь
+            i.ion-ios-arrow-down
           ul.dropdown-menu
             li
               a(href='#')
@@ -99,7 +102,6 @@ header.header
               a(href='#')
                 span Лечение алкоголизма 
               ul
-                a(href='#')
                 li.active
                   a(href='#')
                     span Лечебная программа
@@ -123,7 +125,10 @@ header.header
             li
               a(href='#')
                 span Лечение игромании
-        li: a(href="#") Психиатрическая помощь
+        li.dropdown
+          a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
+            | Психиатрическая помощь
+            i.ion-ios-arrow-down
           ul.dropdown-menu
             li
               a(href='#')
@@ -153,7 +158,10 @@ header.header
             li
               a(href='#')
                 span Психиатр для пожилых пациентов
-        li: a(href="#") Психотерапевтическая помощь
+        li.dropdown
+          a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
+            | Психотерапевтическая помощь
+            i.ion-ios-arrow-down
           ul.dropdown-menu
             li: a(href="#") 
               span Психотерапия при алкогольной и наркотической зависимости
@@ -165,7 +173,10 @@ header.header
               span Гипноз
             li: a(href="#") 
               span Когнитивно-поведенческая психотерапия
-        li: a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Диагностика
+        li.dropdown
+          a(class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
+            | Диагностика
+            i.ion-ios-arrow-down
           ul.dropdown-menu
             li: a(href="#") 
               span Тестирование(анализ) на наркотические вещества

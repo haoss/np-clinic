@@ -23,6 +23,8 @@
           background: -moz-linear-gradient(left, rgba(103,112,137,0.3) 0%, rgba(243,81,79,0.2) 100%)
           background: -webkit-linear-gradient(left, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
           background: linear-gradient(to right, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
+          // background: url('../img/img__background.png') top center no-repeat
+          // opacity: 0.5
         &::after, &::before
           height: 110%
           width: 25px
@@ -240,6 +242,9 @@
       content: ''
       transform: rotate(6deg)
 
+  .section__header
+    padding-top: 50px
+
 /* doctors */
 .doctors
   overflow: hidden
@@ -250,6 +255,8 @@
     padding-left: 30px
     position: relative
     z-index: 10
+    &+.btn
+      margin-left: 30px
   &__block
     display: table
     margin-bottom: 34px

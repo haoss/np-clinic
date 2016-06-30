@@ -5462,6 +5462,7 @@ body {
   color: #444444;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  -webkit-backface-visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
   min-width: 320px; }
@@ -6230,6 +6231,59 @@ label {
   height: 40px;
   z-index: 10;
   background-color: rgba(103, 112, 137, 0.65); }
+  .catalog-navigation nav > ul {
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .catalog-navigation nav > ul > li {
+      display: table-cell;
+      vertical-align: top;
+      margin: 0;
+      list-style: none; }
+      .catalog-navigation nav > ul > li > a {
+        display: block;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        height: 40px;
+        white-space: nowrap;
+        text-decoration: none;
+        text-transform: uppercase;
+        min-width: 200px; }
+        .catalog-navigation nav > ul > li > a > i {
+          display: inline-block;
+          margin-left: 10px; }
+      .catalog-navigation nav > ul > li:hover > a, .catalog-navigation nav > ul > li.open > a {
+        background-color: #636c83; }
+      .catalog-navigation nav > ul > li.dropdown:hover .dropdown-menu {
+        display: block; }
+      .catalog-navigation nav > ul > li.dropdown .dropdown-menu {
+        border: 0;
+        background-color: #a0a7ba;
+        width: 100%;
+        top: 40px;
+        border-radius: 0;
+        left: 0;
+        margin: 0;
+        padding: 10px 0;
+        font-size: 0.875rem; }
+        .catalog-navigation nav > ul > li.dropdown .dropdown-menu ul {
+          margin: 0;
+          padding: 0; }
+        .catalog-navigation nav > ul > li.dropdown .dropdown-menu li {
+          margin: 0;
+          list-style: none; }
+          .catalog-navigation nav > ul > li.dropdown .dropdown-menu li.active a {
+            background-color: #636c83; }
+          .catalog-navigation nav > ul > li.dropdown .dropdown-menu li a {
+            white-space: normal;
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 20px;
+            display: block; }
+            .catalog-navigation nav > ul > li.dropdown .dropdown-menu li a:hover {
+              background-color: #636c83; }
 
 /* list */
 .ul-list, .ol-list {
@@ -6321,7 +6375,9 @@ label {
   font-style: italic;
   line-height: 1.3;
   width: 150px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 0.8125rem; }
   .header__address::after, .header__address::before {
     position: absolute;
     content: '';
@@ -6608,6 +6664,8 @@ label {
       z-index: 5;
       content: '';
       transform: rotate(6deg); }
+  .about .section__header {
+    padding-top: 50px; }
 
 /* doctors */
 .doctors {
@@ -6619,6 +6677,8 @@ label {
     padding-left: 30px;
     position: relative;
     z-index: 10; }
+    .doctors__list + .btn {
+      margin-left: 30px; }
   .doctors__block {
     display: table;
     margin-bottom: 34px; }
@@ -7586,6 +7646,8 @@ label {
     margin-top: 0; }
   .doctors__list {
     padding-left: 0; }
+    .doctors__list + .btn {
+      margin-left: 0px; }
   .consultation {
     background-position: calc(50% + 85px) center; }
     .consultation__label {
@@ -7629,7 +7691,9 @@ label {
     right: -307px;
     margin-top: 15px; }
     .page404__body {
-      width: 535px; } }
+      width: 535px; }
+  .about .section__header {
+    padding-top: 0; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 991px) {
@@ -7923,12 +7987,19 @@ label {
       display: none; }
     .about__carousel .owl-dots {
       padding-right: 25px; }
+  .about .section__header {
+    text-align: center; }
+    .about .section__header::after {
+      left: 50%;
+      transform: translateX(-50%); }
   .doctors {
     padding-bottom: 50px; }
     .doctors__row {
       padding-top: 0; }
     .doctors__block .title {
       font-size: 1.25rem; }
+    .doctors__list + .btn {
+      margin-left: auto; }
   .btn--mobile {
     display: block;
     max-width: 300px;
@@ -8111,8 +8182,8 @@ label {
     text-align: left; }
     .services__block--list figure {
       width: 80px; }
-    .services__block--list figcaption .title {
-      font-size: 1.125rem; }
+    .services__block figcaption .title {
+      font-size: 1rem; }
   .advantages [class*=col-] {
     width: 100% !important; }
     .advantages [class*=col-]:nth-last-child(2) .advantages__block {

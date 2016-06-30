@@ -112,6 +112,64 @@
   height: 40px
   z-index: 10
   background-color: rgba($color-waikawa-grey,0.65)
+  nav
+    &>ul
+      display: table
+      width: 100%
+      margin: 0
+      padding: 0
+      &>li
+        display: table-cell
+        vertical-align: top
+        margin: 0
+        list-style: none
+        &>a
+          display: block
+          line-height: 40px
+          text-align: center
+          color: $color-white
+          height: 40px
+          white-space: nowrap
+          text-decoration: none
+          text-transform: uppercase
+          min-width: 200px
+          &>i
+            display: inline-block
+            margin-left: 10px
+        &:hover, &.open
+          &>a
+            background-color: #636c83
+        &.dropdown
+          &:hover
+            .dropdown-menu
+              display: block
+          .dropdown-menu
+            border: 0
+            background-color: #a0a7ba
+            width: 100%
+            top: 40px
+            border-radius: 0
+            left: 0
+            margin: 0
+            padding: 10px 0
+            font-size: rem(14)
+            ul
+              margin: 0
+              padding: 0
+            li
+              margin: 0
+              list-style: none
+              &.active
+                a
+                  background-color: #636c83
+              a
+                white-space: normal
+                color: $color-white
+                text-decoration: none
+                padding: 5px 20px
+                display: block
+                &:hover
+                  background-color: #636c83
 
 /* list */
 .ul-list, .ol-list
