@@ -1,0 +1,155 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Меню' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Меню' + ' - НП-Клиника' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body#body
+    
+    // Preloader
+    .loader
+      .loader__block
+    
+    // Header
+    header.header
+      
+      .container
+        .header__top
+                    
+          .header__top__phone 
+            i.ion-android-time
+            strong Анонимно и круглосуточно!
+        
+        .header__bottom
+          div
+            .logo
+              a(href="#")
+                img(src="./img/logo.png", alt="")
+          div.hidden-xs.hidden-sm
+            .header__info Центр неотложной наркологии и психиатрии в Москве и Московской области
+          div.hidden-xs.hidden-sm.hidden-md
+            .header__address Каширское шоссе, 
+              br
+              | дом 58 корпус 3
+          div
+            .header__call
+              div
+                a(href="tel:8-964-539-07-79").header__phone 
+                  i.ion-android-call
+                  | 8 (964) 539-07-79
+              div.hidden-xs.hidden-sm.hidden-md
+                .header__or или
+              div
+                a(href="#popup-consultation").btn.btn--primary.btn--skew.popup-link
+                  span.span Заказать звонок
+      
+    .catalog-navigation
+      .container
+        
+        ul#catalog-navigation-ul
+          li
+            a(href="#") Наркологическая помощь
+            ul
+              li
+                a(href='#') Нарколог на дом
+                ul
+                  li
+                    a(href='#') Детоксикация
+                  li
+                    a(href='#') Вывод из запоя
+                  li
+                    a(href='#') Снятие наркотической ломки
+                  li
+                    a(href='#') Кодирование
+              li
+                a(href='#') Лечение алкоголизма
+                ul
+                  li
+                    a(href='#') Лечебная программа
+                  li
+                    a(href='#') Кодирование
+              li
+                a(href='#') Лечение наркозависимости
+                ul
+                  li
+                    a(href='#') Лечебная программа 
+                  li
+                    a(href='#') Кодирование
+              li
+                a(href='#') Лечение табакокурения
+              li
+                a(href='#') Лечение игромании
+          li
+            a(href="#") Психиатрическая помощь
+            ul
+              li
+                a(href='#') Психиатр на дом
+                ul
+                  li
+                    a(href='#') Консультация
+                  li
+                    a(href='#') Назначение терапии
+              li
+                a(href='#') Лечение депрессии 
+              li
+                a(href='#') Лечение шизофрении
+              li
+                a(href='#') Лечение неврологических расстройств
+              li
+                a(href='#') Лечение деменции
+              li
+                a(href='#') Детский психиатр
+              li
+                a(href='#') Психиатр для пожилых пациентов
+          li
+            a(href="#") Психотерапевтическая помощь
+            ul
+              li
+                a(href="#") Психотерапия при алкогольной и наркотической зависимости
+              li
+                a(href="#") Реабилитация 12 шагов
+              li
+                a(href="#") Психотерапия пси психических расстройствах
+              li
+                a(href="#") Гипноз
+              li
+                a(href="#") Когнитивно-поведенческая психотерапия
+          li
+            a(href="#") Диагностика
+            ul
+              li
+                a(href="#") Тестирование(анализ) на наркотические вещества
+              li
+                a(href="#") Диагностика по крови на психические заболевания
+              li
+                a(href="#") Оценка лечебно-реабилитационного потенциала
+          
+        nav(role="navigation")
+          div#catalogNavDesctop
+          div#catalogNavMobile
+
+    
+    // Content
+    .content.content--all
+      .container
+            
+        .section__header.section__header--left
+          .h1 Меню
+          
+    div(style="height: 1500px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/respond/respond.min.js'><![endif]
+
+    script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+    script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+    script(src='./js/libs/modernizr/modernizr.js')
+    script(src='./js/libs/vendor.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
