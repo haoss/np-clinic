@@ -187,10 +187,6 @@ function simpleForm(form, callback) {
 // Catalog Navigation mobile resize
 function catalogNavigation(){
   var width = $(window).width();
-  /*var dropdownLength = $('#catalogNavDesctop .dropdown').length;
-  var accordionPanel = $('#catalogNavMobile .panel').length;
-  console.log(dropdownLength);
-  console.log(accordionPanel);*/
 
   if (width <= 991 && width > 767 ) {
     $('#catalogNavDesctop .dropdown').slice(3).hide();
