@@ -30,7 +30,7 @@
           width: 25px
           position: absolute
           left: -13px
-          top: -5px
+          top: -3px
           background-color: $color-white
           z-index: 10
           content: ''
@@ -741,6 +741,8 @@
           text-decoration: none
           // background-color: $color-red
           transform: skewX(-10deg)
+          &:hover
+            text-decoration: underline
           span
             display: block
             transform: skewX(10deg)
@@ -810,6 +812,21 @@
         background: -moz-linear-gradient(left, rgba(103,112,137,0.3) 0%, rgba(243,81,79,0.2) 100%)
         background: -webkit-linear-gradient(left, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
         background: linear-gradient(to right, rgba(103,112,137,0.3) 0%,rgba(243,81,79,0.2) 100%)
+
+/**/
+.contacts
+
+  &__row
+    font-size: rem(16)
+    padding-bottom: 30px
+    i
+      display: inline-block
+      vertical-align: middle
+      margin-right: 5px
+      color: #848a9b
+      font-size: rem(20)
+      min-width: 25px
+      text-align: center
 
 /* icons */
 .icon

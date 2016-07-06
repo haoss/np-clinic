@@ -5464,7 +5464,6 @@ body {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  backface-visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
   min-width: 320px; }
@@ -6548,7 +6547,7 @@ label {
         width: 25px;
         position: absolute;
         left: -13px;
-        top: -5px;
+        top: -3px;
         background-color: #fff;
         z-index: 10;
         content: '';
@@ -7219,6 +7218,8 @@ label {
         display: block;
         text-decoration: none;
         transform: skewX(-10deg); }
+        .services__nav__body ul li a:hover {
+          text-decoration: underline; }
         .services__nav__body ul li a span {
           display: block;
           transform: skewX(10deg); }
@@ -7282,6 +7283,19 @@ label {
       height: 100%;
       width: 100%;
       background: linear-gradient(to right, rgba(103, 112, 137, 0.3) 0%, rgba(243, 81, 79, 0.2) 100%); }
+
+/**/
+.contacts__row {
+  font-size: 1rem;
+  padding-bottom: 30px; }
+  .contacts__row i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #848a9b;
+    font-size: 1.25rem;
+    min-width: 25px;
+    text-align: center; }
 
 /* icons */
 .icon {
@@ -8239,7 +8253,6 @@ label {
     max-width: 300px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #636c83;
     text-transform: uppercase;
     width: 100%;
     font-size: 1.1875rem;
