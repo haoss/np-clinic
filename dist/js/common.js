@@ -189,6 +189,7 @@ function catalogNavigation(){
   var width = $(window).width();
 
   if (width <= 991 && width > 767 ) {
+    // @FIX
     $('#catalogNavDesctop .dropdown').slice(3).hide();
     $('#catalogNavMobile .panel').slice(0,3).hide();
   }
