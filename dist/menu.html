@@ -59,25 +59,7 @@
             <div class="container">
                 <script src="./js/libs/jquery/jquery-2.1.4.min.js"></script>
                 <script src="./js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
-                <script>
-                    $(document).ready(function(){
-                      var $catalogNavigationUl = $('#catalog-navigation-ul'),
-                          $catalogNavDesctop = $('#catalogNavDesctop'),
-                          $catalogNavMobile = $('#catalogNavMobile'),
-                          backupMenu = $catalogNavigationUl,
-                          menuArray = [],
-                          backupMenuHtml = backupMenu.html();
-                          
-                      //- $catalogNavigationUl.remove();
-                      var menuArrayNew = $catalogNavigationUl.find('> li').get();
-                      
-                      for(var i=0; i<menuArrayNew.length;i++){
-                        console.log(menuArrayNew[i])
-                      }
-                      
-                    })
-                    
-                </script>
+                <script src="./js/menu.js"></script>
                 <ul id="catalog-navigation-ul">
                     <li><a href="#">Наркологическая помощь</a>
                         <ul>
@@ -164,7 +146,7 @@
         <script src="./js/libs/modernizr/modernizr.js"></script>
         <script src="./js/libs/vendor.js"></script><!-- Footer js -->
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
-        <script src="./js/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="./js/libs/owl.carousel/dist/owl.carousel.js"></script>
         <script src="./js/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
         <script>
             $(window).load(function() {

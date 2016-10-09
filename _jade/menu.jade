@@ -51,23 +51,7 @@ html(lang="ru")
         
         script(src='./js/libs/jquery/jquery-2.1.4.min.js')
         script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
-        script.
-          $(document).ready(function(){
-            var $catalogNavigationUl = $('#catalog-navigation-ul'),
-                $catalogNavDesctop = $('#catalogNavDesctop'),
-                $catalogNavMobile = $('#catalogNavMobile'),
-                backupMenu = $catalogNavigationUl,
-                menuArray = [],
-                backupMenuHtml = backupMenu.html();
-                
-            //- $catalogNavigationUl.remove();
-            var menuArrayNew = $catalogNavigationUl.find('> li').get();
-            
-            for(var i=0; i<menuArrayNew.length;i++){
-              console.log(menuArrayNew[i])
-            }
-            
-          })
+        script(src="./js/menu.js")
         
         ul#catalog-navigation-ul
           li
@@ -170,9 +154,3 @@ html(lang="ru")
     
     script(src='./js/libs/modernizr/modernizr.js')
     script(src='./js/libs/vendor.js')
-    include ./_include/_footer-js
-    script.
-      $(window).load(function() {
-        // $(".loader_inner").fadeOut();
-        $(".loader").delay(400).fadeOut("slow");
-      });
