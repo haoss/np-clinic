@@ -1,3 +1,4 @@
+// output: ../dist/menu.html
 doctype
 
 html(lang="ru")
@@ -10,7 +11,7 @@ html(lang="ru")
   body#body
     
     // Preloader
-    .loader
+    //- .loader
       .loader__block
     
     // Header
@@ -51,11 +52,10 @@ html(lang="ru")
         
         script(src='./js/libs/jquery/jquery-2.1.4.min.js')
         script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
-        script(src="./js/menu.js")
         
         ul#catalog-navigation-ul
           li
-            a(href="#") Наркологическая помощь
+            a(href="http://yandex.ru") Наркологическая помощь
             ul
               li
                 a(href='#') Нарколог на дом
@@ -154,3 +154,7 @@ html(lang="ru")
     
     script(src='./js/libs/modernizr/modernizr.js')
     script(src='./js/libs/vendor.js')
+    //- script(src='./js/common.js')
+
+    
+    script(src="./js/menu.js")
