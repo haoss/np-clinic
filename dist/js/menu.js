@@ -4,7 +4,7 @@
         menuDesctop = document.getElementById('catalogNavDesctop'),
         menuMobile = document.getElementById('catalogNavMobile'),
         li = menuMain.querySelectorAll('li'),
-        liLength = li.length - 1;
+        ul = menuMain.querySelectorAll('ul');
 
     var liTest = {
       text: 'Наркологическая помощь',
@@ -105,9 +105,71 @@
     ];
 
     var newArr = [];
+    var ulArray = [];
 
-    // console.log(newArr)
+    // get all Li in Array
+    // function getLiArray(key) {
+    //
+    //   var liLength = li.length;
+    //
+    //   for (var i = 0; i < liLength; i++) {
+    //     var liObj = {};
+    //     liObj.text = li[i].querySelector('a').text;
+    //     liObj.link = li[i].querySelector('a').href;
+    //
+    //     if (li[i].querySelector('ul')) {
+    //       liObj.children = true;
+    //     } else {
+    //       liObj.children = false;
+    //     }
+    //
+    //     newArr.push(liObj)
+    //   }
+    //
+    //   return newArr;
+    // };
+    //
+    // function getUlArray(key) {
+    //   var ulLength = key.length;
+    //
+    //   for (var j = 0; j < ulLength; j++) {
+    //     ulArray.push(key[j])
+    //   }
+    //
+    //   return ulArray
+    // };
+    //
+    // console.log(getLiArray(li));
+    // console.log(getUlArray(ul));
 
-    // console.log(li[0].children);
+    // console.log(menuMain)
 
-}());
+    // function getLi(key) {
+    //   return key
+    // }
+    //
+    // console.log(getLi());
+
+    // console.log(li[0].lastElementChild.nodeName);
+
+    function getLi(key) {
+
+      var i = 0;
+      while (i < key.childNodes.length) {
+        // console.log(key.childNodes[i]);
+        if (key.childNodes[i].nodeName === 'LI') {
+
+          getLi(key.childNodes)
+        } else {
+          console.log(false);
+        }
+
+        i++
+      }
+    };
+
+    getLi(menuMain)
+
+    // console.dir(menuMain.childNodes[1].nodeName );
+
+})();
